@@ -1,1 +1,88 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial scale=1.0" />
+<title style="font-size: 2em;">Accrington Stanley</title>
+<style>
+body {
+  font-family: "Calibri", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: red;
+  color: white;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  width: 100px;
+}
+
+img {
+  max-width: 100%;
+}
+</style>
+</head>
+<body>
+<h2>The Crown Ground</h2>
+<img src="image.jpg" alt="This is a picture of the Crown Ground" />
+<p>The Crown Ground supports a maximum capacity of 5,450 fans, with 3,100 of these being seated.Season ticket holders will be prioritised for a seated ticket unless they request standing.</p>
+<h3>Our Prices</h3>
+<ul>
+  <li>Adult: £285.00</li>
+  <li>Concessions: £227.00</li>
+  <li>Child: £119.00</li>
+</ul>
+<h3>Season ticket request form</h3>
+<form action="/submit" method="post" role="form">
+<div>
+<p>How many season tickets are you applying for?</p>
+<p>You can apply for a maximum of 3 season tickets.</p>
+<input type="radio" id="how-many-season-tickets" name="how-many-season-tickets" value="1" aria-label="1 ticket">
+<label for="how-many-season-tickets">1</label>
+<input type="radio" id="how-many-season-tickets" name="how-many-season-tickets" value="2" aria-label="2 tickets">
+<label for="how-many-season-tickets">2</label>
+<input type="radio" id="how-many-season-tickets" name="how-many-season-tickets" value="3" aria-label="3 tickets">
+<label for="how-many-season-tickets">3</label>
+</div>
+<br>
+<div>
+<p>What type of season ticket do you require?</p>
+<input type="checkbox" id="checkbox1" name="checkbox" value="Adult" multiple aria-label="Adult">
+<label for="checkbox1">Adult</label>
+<input type="checkbox" id="checkbox2" name="checkbox" value="Child" multiple aria-label="Child">
+<label for="checkbox2">Child</label>
+<input type="checkbox" id="checkbox3" name="checkbox" value="Concessionary" multiple aria-label="Concessionary">
+<label for="checkbox3">Concessionary</label>
+</div>
+<br>
+<div>
+<p> Would you prefer a seat or to be in the safe standing?</p>
+<input type="radio" id="Standing" name="Standing" value="Standing" aria-label="Standing">
+<label for="Standing">Standing</label>
+<input type="radio" id="Seated" name="Seated" value="Seated" aria-label="Seated">
+<label for="Seated">Seated</label>
+</div>
+<br>
+<div>
+  <label for="firstname">First name:</label>
+  <input type="text" id="firstname" name="firstname" aria-label="Your first name" placeholder="Please enter your first name">
+</div>
+<br>
+<div>
+  <label for="surname">Surname:</label>
+  <input type="text" id="surname" name="surname" aria-label="Your surname" placeholder="Please enter your surname">
+</div>
+<br>
+<div>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" aria-label="Your email address" placeholder="please enter your email address"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+</div>
+<input type="submit" value="Submit" class="submit-button" />
+</form>
+</body>
+</html>
